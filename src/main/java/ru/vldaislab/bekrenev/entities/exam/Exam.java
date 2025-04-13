@@ -1,4 +1,7 @@
-package ru.vldaislab.bekrenev.entities;
+package ru.vldaislab.bekrenev.entities.exam;
+
+import ru.vldaislab.bekrenev.entities.student.Student;
+import ru.vldaislab.bekrenev.entities.subject.Subject;
 
 import javax.persistence.*;
 import java.util.Date;

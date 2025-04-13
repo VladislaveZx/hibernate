@@ -1,4 +1,4 @@
-package ru.vldaislab.bekrenev.entities;
+package ru.vldaislab.bekrenev.entities.exam;
 
 import java.io.Serializable;
 import java.sql.Date;

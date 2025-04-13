@@ -1,4 +1,4 @@
-package ru.vldaislab.bekrenev.entities;
+package ru.vldaislab.bekrenev.entities.student;
 
 import javax.persistence.*;
 
@@ -8,23 +8,34 @@ public class Student {
 
     @Id
     @Column(name = "number")
-    private int number;
+    private Integer number;
 
     @Column(name = "full_name")
     private String fullName;
 
-    @Column(name = "group_number")
-    private int groupNumber;
+    @Column(name = "group_number", nullable = true)
+    private Integer groupNumber;
 
-    @Column(name = "birth_year")
-    private int birthYear;
+    @Column(name = "birth_year", nullable = true)
+    private Integer birthYear;
+
+    public Student(Integer number, String fullName, Integer birthYear, Integer groupNumber) {
+        this.number = number;
+        this.fullName = fullName;
+        this.groupNumber = groupNumber;
+        this.birthYear = birthYear;
+    }
+
+    public Student() {
+
+    }
 
     // Getters and Setters
     public int getNumber() {
         return number;
     }
 
-    public void setNumber(int number) {
+    public void setNumber(Integer number) {
         this.number = number;
     }
 
@@ -40,7 +51,7 @@ public class Student {
         return groupNumber;
     }
 
-    public void setGroupNumber(int groupNumber) {
+    public void setGroupNumber(Integer groupNumber) {
         this.groupNumber = groupNumber;
     }
 
@@ -48,7 +59,7 @@ public class Student {
         return birthYear;
     }
 
-    public void setBirthYear(int birthYear) {
+    public void setBirthYear(Integer birthYear) {
         this.birthYear = birthYear;
     }
 }

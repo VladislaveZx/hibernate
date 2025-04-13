@@ -1,4 +1,4 @@
-package ru.vldaislab.bekrenev.entities;
+package ru.vldaislab.bekrenev.entities.subject;
 
 import javax.persistence.*;
 
