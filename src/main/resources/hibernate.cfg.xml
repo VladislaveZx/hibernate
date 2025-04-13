@@ -1,0 +1,27 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/short_db_session</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">8801243</property>
+
+        <!-- C3P0 Pool -->
+        <property name="hibernate.c3p0.min_size">5</property>
+        <property name="hibernate.c3p0.max_size">20</property>
+        <property name="hibernate.c3p0.timeout">300</property>
+
+        <property name="hibernate.jdbc.batch_size">0</property>
+
+        <!-- Context & Debug -->
+        <property name="hibernate.current_session_context_class">thread</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Disable second-level cache to fix the error -->
+        <property name="hibernate.cache.use_second_level_cache">false</property>
+    </session-factory>
+</hibernate-configuration>
